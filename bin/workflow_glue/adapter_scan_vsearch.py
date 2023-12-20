@@ -57,10 +57,10 @@ def argparser():
         "-k",
         "--kit",
         help="Specify either the 10X 3' gene expression kit (3prime), the 5' \
-        gene expression kit (5prime), or the multiome kit (multiome) This \
+        gene expression kit (5prime), the multiome kit (multiome), or the Visium spatial kit (visium). This \
         determines which adapter sequences to search for in the reads",
         default="3prime",
-        choices=['3prime', '5prime', 'multiome']
+        choices=['3prime', '5prime', 'multiome', 'visium']
     )
 
     parser.add_argument(

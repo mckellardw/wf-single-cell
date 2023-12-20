@@ -60,7 +60,7 @@ def argparser():
         determines which adapter sequences to search for in the reads \
         [3prime]",
         default="3prime",
-        choices=['3prime', '5prime', 'multiome']
+        choices=['3prime', '5prime', 'multiome', 'visium']
     )
 
     parser.add_argument(
@@ -307,7 +307,7 @@ def align_adapter(args):
     # Use only the specified suffix length of adapter1
     adapter1_probe_seq = args.adapter1_seq[-args.adapter1_suff_length:]
 
-    if args.kit in ("3prime", "multiome"):
+    if args.kit in ("3prime", "multiome", "visium"):
         # Compile the actual probe sequence of
         # <adapter1_suffix>NNN...NNN<TTTTT....>
         probe_seq = "{a1}{bc}{umi}{pt}".format(
@@ -326,7 +326,7 @@ def align_adapter(args):
             tso="TTTCTTATATGGG",
         )
     else:
-        raise Exception("Invalid kit name! Specify either 3prime or 5prime.")
+        raise Exception("Invalid kit name! Specify 3prime, 5prime, multiome, or visium.")
 
     with AlignmentFile(
             str(args.bam), "rb") as bam_fh, \

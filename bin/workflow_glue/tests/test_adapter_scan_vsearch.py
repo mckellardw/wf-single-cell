@@ -56,7 +56,7 @@ def test_call_vsearch(adapters, expected_results, segment):
     """
     id_ = 'read_1'
 
-    kits = ['3prime', '5prime', 'multiome']
+    kits = ['3prime', '5prime', 'multiome', 'visium']
 
     for kit in kits:
         sys.stdout.write(f'\n--- Testing: {kit} ---\n')

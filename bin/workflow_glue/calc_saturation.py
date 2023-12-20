@@ -93,7 +93,7 @@ def downsample_dataframe(df, fraction):
     logger = get_named_logger('ClcSat')
 
     logger.info(f"Doing {fraction}")
-    df_scaled = df.sample(frac=fraction)
+    df_scaled = df.sample(fraction=fraction)
     n_reads = df_scaled.shape[0]
 
     # Get the unique number of reads, genes and UMIs per cell barcode
