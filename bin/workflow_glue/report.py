@@ -254,7 +254,7 @@ def main(args):
             between the supported kits. They are:
             """
         )
-        p("3prime, multiome, and visium kits:")
+        p("3prime, multiome, visium, and seeker kits:")
         ul(
             li("Adapter1: Read1"),
             li("Adapter2: TSO")

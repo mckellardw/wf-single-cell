@@ -17,4 +17,8 @@ kit_adapters = {
         'adapter1': 'CTACACGACGCTCTTCCGATCT',
         'adapter2': 'ATGTACTCTGCGTTGATACCACTGCTT'
     },
+    'seeker_SHVN1': {
+        'adapter1': 'CTACACGACGCTCTTCCGATCT',
+        'adapter2': 'ATGTACTCTGCGTTGATACCACTGCTT'
+    },
 }

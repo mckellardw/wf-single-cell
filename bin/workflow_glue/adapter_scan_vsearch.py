@@ -60,7 +60,7 @@ def argparser():
         gene expression kit (5prime), the multiome kit (multiome), or the Visium spatial kit (visium). This \
         determines which adapter sequences to search for in the reads",
         default="3prime",
-        choices=['3prime', '5prime', 'multiome', 'visium']
+        choices=['3prime', '5prime', 'multiome', 'visium', 'seeker_SHVN1']
     )
 
     parser.add_argument(
